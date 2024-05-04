@@ -1,0 +1,73 @@
+/* Reset some default browser styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: cursive; /* optional: specify a font-family */
+}
+
+/* Global styles */
+h3 {
+    text-align: center;
+}
+
+section {
+    margin: 20px; /* Add spacing between sections */
+    padding-top: 30px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    border: 2px solid black; /* Add a black border to sections */
+    background-color: darkgray;
+    font-size: medium;
+    font-family:cursive;
+    position: relative; /* Establish positioning context for absolute positioning */
+}
+
+h4 {
+    margin: 0; /* Remove default margin for section titles */
+    position: absolute;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 5px 10px;
+    z-index: 1;
+    top:0px;
+    right: 0px;
+}
+
+.chicken {
+    background-color: rgb(244, 138, 138);
+}
+
+.beef {
+    background-color: indianred;
+    color: antiquewhite;
+}
+
+.sushi {
+    background-color: burlywood;
+}
+
+/* Media queries for responsiveness */
+/* Desktop view */
+@media (min-width: 992px) {
+    section {
+        width: calc(33.33% - 40px); /* Each section takes up one-third of the width with spacing */
+        float: left; /* Float sections to create a row */
+    }
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+    section {
+        width: calc(50% - 40px); /* Two sections side by side with spacing */
+        float: left;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+    section {
+        width: calc(100% - 40px); /* Full width with spacing */
+        float: none; /* Reset float */
+    }
+}
